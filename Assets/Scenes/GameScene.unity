@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 104972191}
   - component: {fileID: 104972190}
   - component: {fileID: 104972189}
-  - component: {fileID: 104972195}
   - component: {fileID: 104972196}
+  - component: {fileID: 104972195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -263,7 +263,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &104972193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -327,14 +327,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104972188}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0026295185, y: -1.2950897, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.50111103, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1556639698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &104972195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104972188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5167ca735fce5c247b10eae6bb8bf548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10
+  jumpForce: 10
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!114 &104972196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361,7 +378,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 104972196}
+      - m_Target: {fileID: 104972195}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -377,7 +394,7 @@ MonoBehaviour:
     m_ActionName: 'Movement/Move[/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 104972196}
+      - m_Target: {fileID: 104972195}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -396,22 +413,6 @@ MonoBehaviour:
   m_DefaultActionMap: Movement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1556639697}
---- !u!114 &104972196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104972188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5167ca735fce5c247b10eae6bb8bf548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 10
-  jumpForce: 10
-  spriteRenderer: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!1 &148957624
 GameObject:
   m_ObjectHideFlags: 0
@@ -14450,12 +14451,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556639695}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.05, y: 1.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 104972194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1556639699
 MonoBehaviour:
@@ -15945,7 +15946,6 @@ Tilemap:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1556639698}
   - {fileID: 1678250600}
   - {fileID: 148957627}
   - {fileID: 104972194}
