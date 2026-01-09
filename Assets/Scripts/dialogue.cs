@@ -3,7 +3,7 @@
  using UnityEngine;
  using TMPro;
 
- public class Dialogue : MonoBehaviour
+ public class Dialogue : SceneHandler
  {
      public TextMeshProUGUI textComponent;
      public string[] lines;
@@ -57,6 +57,7 @@
          else
          {
              gameObject.SetActive(false);
+             LoadGameScene();
          }
      }
  }
