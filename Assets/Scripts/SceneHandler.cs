@@ -31,6 +31,13 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+    public void LoadStartScene()
+    {
+        Scene scene = SceneManager.GetSceneByName("a25oskni");
+        if (scene.isLoaded) return;
+        SceneManager.LoadScene("a25oskni");
+    }
+
     public void LoadSettings()
     {
         Scene scene = SceneManager.GetSceneByName("Settings");
