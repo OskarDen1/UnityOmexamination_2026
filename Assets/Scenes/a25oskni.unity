@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1892047970}
   lines:
+  - A to walk left / D to walk right and Space to jump
   - There was once upon a time an island
   - You found yourself alone on this island
   - Now you are stuck on that island
