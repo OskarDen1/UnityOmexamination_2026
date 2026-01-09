@@ -30,4 +30,11 @@ public class SceneHandler : MonoBehaviour
         if (scene.isLoaded) return;
         SceneManager.LoadScene("GameScene");
     }
+
+    public void LoadSettings()
+    {
+        Scene scene = SceneManager.GetSceneByName("Settings");
+        if (scene.isLoaded) return;
+        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+    }
 }
